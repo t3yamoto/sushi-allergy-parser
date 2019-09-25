@@ -21,6 +21,8 @@ $ pip install sushi-allergy-parser
 ```python
 >>> from sushi_allergy_parser import SushiroAllergyParser
 >>> df = SushiroAllergyParser().parse()
+>>> type(df)
+<class 'pandas.core.frame.DataFrame'>
 >>> df
     category       name          egg  ...      gelatin       sesame    cashewNut
 0        にぎり  合鴨ロースの煮込み  NOT_CONTAIN  ...  NOT_CONTAIN  NOT_CONTAIN  NOT_CONTAIN
