@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "sushi-allergy-parser"
-version = "0.1.1"
+version = "0.1.2"
 description = "sushi-allergy-parser is a parser for allergy infomation document of japanese conveyor-belt sushi chain. "
 readme = "README.md"
 authors = ["t3yamoto <3yamoto.dev@gmail.com>"]
