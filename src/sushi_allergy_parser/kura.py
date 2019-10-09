@@ -4,38 +4,38 @@ import numpy
 import pandas as pd
 import tabula
 
-from .base import AllergenState, BaseParser
+from .base import AllergenState, BaseParser, Allergen
 from .util import removeNewLine
 
 REMOTE_URL = "http://www.kura-corpo.co.jp/common/pdf/kura_allergen.pdf"
 BASE_LAYOUT = [
-    ("卵", "egg", True),  # header, key, required
-    ("小麦", "wheat", True),
-    ("乳・乳製品", "milk", True),
-    ("落花生ピーナッツ", "peanut", True),
-    ("ソバ", "buckwheat", True),
-    ("えび", "shrimp", True),
-    ("かに", "crab", True),
-    ("いか", "squid", True),
-    ("いくら", "salmonRoe", True),
-    ("さけ", "salmon", True),
-    ("さば", "mackerel", True),
-    ("牛肉", "beef", True),
-    ("鶏肉", "chicken", True),
-    ("豚肉", "pork", True),
-    ("大豆", "soybean", True),
-    ("オレンジ", "orange", True),
-    ("りんご", "apple", True),
-    ("ゼラチン", "gelatin", True),
-    ("クルミ", "walnut", True),
-    ("バナナ", "banana", True),
-    ("キウイ", "kiwi", True),
-    ("山芋", "yamOrSweetPotato", True),
-    ("モモ", "peach", True),
-    ("ごま", "sesame", True),
-    ("あわび", "abalone", True),
-    ("カシューナッツ", "cashewNut", True),
-    ("松茸", "matsutakeMushroom", True),
+    ("卵", Allergen.EGG.value, True),  # header, key, required
+    ("小麦", Allergen.WHEAT.value, True),
+    ("乳・乳製品", Allergen.MILK.value, True),
+    ("落花生ピーナッツ", Allergen.PEANUT.value, True),
+    ("ソバ", Allergen.BUCKWHEAT.value, True),
+    ("えび", Allergen.SHRIMP.value, True),
+    ("かに", Allergen.CRAB.value, True),
+    ("いか", Allergen.SQUID.value, True),
+    ("いくら", Allergen.SALMON_ROE.value, True),
+    ("さけ", Allergen.SALMON.value, True),
+    ("さば", Allergen.MACKEREL.value, True),
+    ("牛肉", Allergen.BEEF.value, True),
+    ("鶏肉", Allergen.CHICKEN.value, True),
+    ("豚肉", Allergen.PORK.value, True),
+    ("大豆", Allergen.SOYBEAN.value, True),
+    ("オレンジ", Allergen.ORANGE.value, True),
+    ("りんご", Allergen.APPLE.value, True),
+    ("ゼラチン", Allergen.GELATIN.value, True),
+    ("クルミ", Allergen.WALNUT.value, True),
+    ("バナナ", Allergen.BANANA.value, True),
+    ("キウイ", Allergen.KIWI.value, True),
+    ("山芋", Allergen.YAM_OR_SWEET_POTATO.value, True),
+    ("モモ", Allergen.PEACH.value, True),
+    ("ごま", Allergen.SESAME.value, True),
+    ("あわび", Allergen.ABALONE.value, True),
+    ("カシューナッツ", Allergen.CASHEW_NUT.value, True),
+    ("松茸", Allergen.MATSUTAKE_MUSHROOM.value, True),
 ]
 PAGE1_LAYOUT = [
     ("品名", "name", True),
