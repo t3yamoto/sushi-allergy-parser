@@ -23,4 +23,7 @@ jobs:
       run: pip install poetry
     - name: Install dependencies
       run: poetry install
-    - run: java -version
+    - name: Confirm java runtime
+      run: java -version
+    - name: Run test
+      run: poetry run pytest
