@@ -1,5 +1,7 @@
 # sushi-allergy-parser
 
+![](https://github.com/t3yamoto/sushi-allergy-parser/workflows/CI/badge.svg)
+
 `sushi-allergy-parser` is a parser for allergy infomation document of japanese conveyor-belt sushi chain. Currently, the following documents are supported.
 
 * スシロー (http://www3.akindo-sushiro.co.jp/pdf/menu/allergy.pdf)
