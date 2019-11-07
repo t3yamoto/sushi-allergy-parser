@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  schedule:
+    - cron: '30 18 * * *' # 9:30(JST)
+  push:
+    branches: 
+      - master
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+      with:
+        fetch-depth: 1
+    - name: Setup Python
+      uses: actions/setup-python@v1
+      with:
+        python-version: '3.7'
+        architecture: 'x64'
+    - name: Install poetry
+      run: pip install poetry
+    - name: Install dependencies
+      run: poetry install
+    - run: java -version
