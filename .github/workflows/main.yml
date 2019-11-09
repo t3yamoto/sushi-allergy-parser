@@ -2,7 +2,7 @@ name: CI
 
 on:
   schedule:
-    - cron: '30 18 * * *' # 9:30(JST)
+    - cron: '30 0 * * *' # 9:30(JST)
   push:
     branches: 
       - master
