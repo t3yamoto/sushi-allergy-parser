@@ -4,9 +4,8 @@
 
 `sushi-allergy-parser` is a parser for allergy infomation document of japanese conveyor-belt sushi chain. Currently, the following documents are supported.
 
-* スシロー (http://www3.akindo-sushiro.co.jp/pdf/menu/allergy.pdf)
-* くら寿司 (http://www.kura-corpo.co.jp/common/pdf/kura_allergen.pdf)
-
+- スシロー (http://www3.akindo-sushiro.co.jp/pdf/menu/allergy.pdf)
+- くら寿司 (https://www.kurasushi.co.jp/common/pdf/kura_allergen.pdf)
 
 ## Requirements
 

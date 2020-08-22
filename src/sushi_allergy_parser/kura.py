@@ -7,11 +7,11 @@ import tabula
 from .base import AllergenState, BaseParser, Allergen
 from .util import removeNewLine
 
-REMOTE_URL = "http://www.kura-corpo.co.jp/common/pdf/kura_allergen.pdf"
+REMOTE_URL = "https://www.kurasushi.co.jp/common/pdf/kura_allergen.pdf"
 BASE_LAYOUT = [
     ("卵", Allergen.EGG.value, True),  # header, key, required
     ("小麦", Allergen.WHEAT.value, True),
-    ("乳・乳製品", Allergen.MILK.value, True),
+    ("乳成分", Allergen.MILK.value, True),
     ("落花生ピーナッツ", Allergen.PEANUT.value, True),
     ("ソバ", Allergen.BUCKWHEAT.value, True),
     ("えび", Allergen.SHRIMP.value, True),
@@ -33,9 +33,9 @@ BASE_LAYOUT = [
     ("山芋", Allergen.YAM_OR_SWEET_POTATO.value, True),
     ("モモ", Allergen.PEACH.value, True),
     ("ごま", Allergen.SESAME.value, True),
-    ("あわび", Allergen.ABALONE.value, True),
+    # ("あわび", Allergen.ABALONE.value, True),
     ("カシューナッツ", Allergen.CASHEW_NUT.value, True),
-    ("松茸", Allergen.MATSUTAKE_MUSHROOM.value, True),
+    # ("松茸", Allergen.MATSUTAKE_MUSHROOM.value, True),
 ]
 PAGE1_LAYOUT = [
     ("品名", "name", True),
@@ -46,7 +46,7 @@ PAGE1_LAYOUT = [
 PAGE2_LAYOUT = PAGE1_LAYOUT
 PAGE3_LAYOUT = [
     ("品名", "name", True),
-    ("一(皿kカ・cロ一aリlー杯当)り", "calory", False),
+    ("一(皿kカ・cロ一aリー杯l当)り", "calory", False),
     ("該当なし", "none", False),
     *BASE_LAYOUT,
 ]
